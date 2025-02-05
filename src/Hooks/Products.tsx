@@ -25,7 +25,7 @@ const ProductList = () => {
       <Grid container spacing={2}>
         {products.map((product) => (
           <Grid item xs={12} sm={6} md={4} key={product.id}>
-            <Card sx={{ minWidth: 275, height: 300 }}>
+            <Card sx={{ minWidth: 225 }}>
               <CardContent>
                 <Box
                   component="img"
