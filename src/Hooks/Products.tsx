@@ -5,7 +5,6 @@ import CardContent from "@mui/material/CardContent";
 import Typography from "@mui/material/Typography";
 import Box from "@mui/material/Box";
 import Grid from "@mui/material/Grid";
-import ImageListItem from "@mui/material/ImageListItem";
 import Button from "@mui/material/Button";
 import Rating from "@mui/material/Rating";
 
@@ -13,7 +12,7 @@ const ProductList = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    getProductsApi().then((data) => {
+    getProductsApi().then((data: any) => {
       setProducts(data);
       console.log(data);
     });
@@ -23,7 +22,7 @@ const ProductList = () => {
     <div>
       <h1>Product List</h1>
       <Grid container spacing={2}>
-        {products.map((product) => (
+        {products.map((product: any) => (
           <Grid item xs={12} sm={6} md={4} key={product.id}>
             <Card sx={{ minWidth: 225 }}>
               <CardContent>
@@ -55,7 +54,7 @@ const ProductList = () => {
                   </Typography>
                 </Box>
                 <Typography sx={{ marginTop: 2 }}>
-                  <Button variant="contained">Click Here</Button>
+                  <Button variant="contained">Add To Cart</Button>
                 </Typography>
               </CardContent>
             </Card>
